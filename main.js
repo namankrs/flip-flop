@@ -50,7 +50,6 @@ const hasWon = function() {
 
 window.onload = function() {
   images = shuffleImages();
-  timer();
 };
 
 const areEqual = function(clickedCard) {
@@ -84,4 +83,33 @@ const flipCard = function(event) {
     previouslyClickedCard.src = clickedCard.src = "/images/cardBack.jpg";
     previouslyClickedCard = "";
   }, 500);
+};
+
+const gameScript =
+  "<div class='timer'><span>Time:</span> <span id='timer'>0</span></div>" +
+  "<div class='cards'>" +
+  "<img onclick='flipCard(event)' src='/images/cardBack.jpg' id='1' />" +
+  "<img onclick='flipCard(event)' src='/images/cardBack.jpg' id='2' />" +
+  "<img onclick='flipCard(event)' src='/images/cardBack.jpg' id='3' />" +
+  "<img onclick='flipCard(event)' src='/images/cardBack.jpg' id='4' />" +
+  "<img onclick='flipCard(event)' src='/images/cardBack.jpg' id='5' />" +
+  "<img onclick='flipCard(event)' src='/images/cardBack.jpg' id='6' />" +
+  "<img onclick='flipCard(event)' src='/images/cardBack.jpg' id='7' />" +
+  "<img onclick='flipCard(event)' src='/images/cardBack.jpg' id='8' />" +
+  "<img onclick='flipCard(event)' src='/images/cardBack.jpg' id='9' />" +
+  "<img onclick='flipCard(event)' src='/images/cardBack.jpg' id='10' />" +
+  "<img onclick='flipCard(event)' src='/images/cardBack.jpg' id='11' />" +
+  "<img onclick='flipCard(event)' src='/images/cardBack.jpg' id='12' />" +
+  "<img onclick='flipCard(event)' src='/images/cardBack.jpg' id='13' />" +
+  "<img onclick='flipCard(event)' src='/images/cardBack.jpg' id='14' />" +
+  "<img onclick='flipCard(event)' src='/images/cardBack.jpg' id='15' />" +
+  "<img onclick='flipCard(event)' src='/images/cardBack.jpg' id='16' />" +
+  "<img onclick='flipCard(event)' src='/images/cardBack.jpg' id='17' />" +
+  "<img onclick='flipCard(event)' src='/images/cardBack.jpg' id='18' />" +
+  "</div>";
+
+const startGame = function() {
+  document.getElementById("container").innerHTML = gameScript;
+  timer();
+  return;
 };
